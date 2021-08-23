@@ -17,10 +17,9 @@ class Webservice {
             } else if let data = data {
                 let cryptoList = try? JSONDecoder().decode([CryptoCurrency].self, from: data)
                 
-                print(cryptoList)
                 completion(cryptoList)
             }
         }.resume()
         
-    } // İnternetten veri çekip , bu verileri geri döndürme gibi bir işlem yapılacaksa @escaping kullanılmaılıdır
+    } 
 }
